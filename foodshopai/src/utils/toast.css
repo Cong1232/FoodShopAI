@@ -1,0 +1,32 @@
+.toast-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.custom-toast {
+  background-color: #333;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  font-size: 14px;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.custom-toast.toast-success {
+  background-color: #2E7D32; /* Primary brand color */
+}
+
+.custom-toast.toast-error {
+  background-color: #d32f2f;
+}
+
+.custom-toast.hide {
+  opacity: 0;
+}

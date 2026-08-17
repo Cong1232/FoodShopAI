@@ -1,0 +1,142 @@
+/**
+ * CartSummary.css
+ */
+
+.cart-summary {
+  background-color: var(--color-white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+  padding: 22px;
+  position: sticky;
+  top: calc(var(--header-height) + 16px);
+}
+
+.cart-summary-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: var(--color-text);
+}
+
+.cart-summary-items {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 180px;
+  overflow-y: auto;
+}
+
+.cart-summary-items li {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+}
+
+.cart-summary-item-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cart-summary-item-qty {
+  color: var(--color-text-light);
+}
+
+.cart-summary-voucher {
+  margin-bottom: 18px;
+  padding-bottom: 18px;
+  border-bottom: 1px dashed var(--color-border);
+}
+
+.cart-summary-voucher-form {
+  display: flex;
+  gap: 8px;
+}
+
+.cart-summary-voucher-form input {
+  flex: 1;
+  padding: 9px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-family-base);
+  font-size: 0.85rem;
+  outline: none;
+}
+
+.cart-summary-voucher-form input:focus {
+  border-color: var(--color-primary);
+}
+
+.cart-summary-voucher-form button {
+  padding: 9px 16px;
+  border: none;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.cart-summary-voucher-applied {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(46, 125, 50, 0.08);
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  color: var(--color-primary);
+}
+
+.cart-summary-voucher-applied button {
+  border: none;
+  background: transparent;
+  color: var(--color-primary);
+  cursor: pointer;
+  display: flex;
+}
+
+.cart-summary-voucher-error {
+  color: #e53935;
+  font-size: 0.78rem;
+  margin-top: 6px;
+}
+
+.cart-summary-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.92rem;
+  color: var(--color-text-light);
+  margin-bottom: 12px;
+}
+
+.cart-summary-row--discount {
+  color: var(--color-accent);
+}
+
+.cart-summary-row--total {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--color-border);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.cart-summary-row--total span:last-child {
+  color: var(--color-primary);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 991px) {
+  .cart-summary {
+    position: static;
+  }
+}

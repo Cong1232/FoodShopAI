@@ -1,0 +1,99 @@
+/**
+ * OrderCard.css
+ */
+
+.order-card {
+  background-color: var(--color-white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+  padding: 18px 20px;
+  margin-bottom: 16px;
+  transition: box-shadow 0.2s ease;
+}
+
+.order-card:hover {
+  box-shadow: var(--shadow-hover);
+}
+
+.order-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+
+.order-card-id {
+  display: block;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 4px;
+}
+
+.order-card-date {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--color-text-light);
+}
+
+.order-card-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.order-card-total {
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+}
+
+.order-card-total strong {
+  color: var(--color-primary);
+  font-size: 1rem;
+}
+
+.order-card-toggle {
+  font-weight: 500;
+  color: var(--color-primary);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.order-card-toggle:hover {
+  background-color: rgba(46, 125, 50, 0.08);
+}
+
+.order-card-details {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px dashed var(--color-border);
+}
+
+.order-card-details ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.order-card-details li {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.88rem;
+  color: var(--color-text);
+}
+
+.order-card-item-qty {
+  color: var(--color-text-light);
+}
+
+.order-card-payment {
+  font-size: 0.82rem;
+  color: var(--color-text-light);
+  font-style: italic;
+}

@@ -1,0 +1,37 @@
+/**
+ * global.css
+ * Style áp dụng cho toàn bộ ứng dụng: reset cơ bản, font mặc định, nền trang.
+ */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family-base);
+  background-color: var(--color-background);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: var(--font-family-base);
+}
+
+/* Khoảng đệm cho phần nội dung chính (dưới Header cố định nếu cần) */
+.page-content {
+  min-height: calc(100vh - var(--header-height) - 320px);
+}
+
+/* Container căn giữa, giới hạn chiều rộng tối đa - dùng thay cho .container mặc định khi cần rộng hơn */
+.section-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 16px;
+}

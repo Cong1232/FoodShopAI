@@ -1,0 +1,34 @@
+/**
+ * ProfileCard.css
+ */
+
+.profile-card {
+  background-color: var(--color-white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+  padding: 28px 20px;
+  text-align: center;
+}
+
+.profile-card-avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 14px;
+  border: 3px solid var(--color-secondary);
+}
+
+.profile-card-name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 4px;
+}
+
+.profile-card-email,
+.profile-card-phone {
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+  margin: 0;
+}

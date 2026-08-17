@@ -1,0 +1,31 @@
+/**
+ * SortDropdown.css
+ */
+
+.sort-dropdown {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.sort-dropdown-label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-text);
+  white-space: nowrap;
+  margin: 0;
+}
+
+.sort-dropdown-select {
+  min-width: 170px;
+  border-radius: var(--radius-sm);
+  border-color: var(--color-border);
+  font-size: 0.88rem;
+  padding: 10px 12px;
+}
+
+.sort-dropdown-select:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 0.2rem rgba(46, 125, 50, 0.15);
+}

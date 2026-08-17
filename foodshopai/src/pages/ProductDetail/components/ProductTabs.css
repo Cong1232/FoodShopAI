@@ -1,0 +1,126 @@
+/**
+ * ProductTabs.css
+ */
+
+.product-tabs {
+  margin-top: 48px;
+  background-color: var(--color-white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+  overflow: hidden;
+}
+
+.product-tabs-nav {
+  display: flex;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.product-tabs-btn {
+  padding: 16px 26px;
+  border: none;
+  background: transparent;
+  font-family: var(--font-family-base);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--color-text-light);
+  cursor: pointer;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.product-tabs-btn:hover {
+  color: var(--color-primary);
+}
+
+.product-tabs-btn--active {
+  color: var(--color-primary);
+}
+
+.product-tabs-btn--active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 3px;
+  background-color: var(--color-primary);
+  border-radius: 3px 3px 0 0;
+}
+
+.product-tabs-content {
+  padding: 28px;
+}
+
+.product-tabs-pane p {
+  line-height: 1.75;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.product-tabs-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.product-tabs-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 0.9rem;
+}
+
+.product-tabs-table td:first-child {
+  width: 220px;
+  color: var(--color-text-light);
+  font-weight: 500;
+}
+
+.product-tabs-table tr:last-child td {
+  border-bottom: none;
+}
+
+.product-tabs-review-summary {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.product-tabs-review-score {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.product-tabs-review-stars {
+  color: var(--color-accent);
+  display: flex;
+  gap: 3px;
+  margin-bottom: 4px;
+}
+
+.product-tabs-review-count {
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+}
+
+.product-tabs-review-note {
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+  font-style: italic;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 576px) {
+  .product-tabs-btn {
+    padding: 14px 14px;
+    font-size: 0.85rem;
+  }
+
+  .product-tabs-content {
+    padding: 20px;
+  }
+
+  .product-tabs-table td:first-child {
+    width: 140px;
+  }
+}

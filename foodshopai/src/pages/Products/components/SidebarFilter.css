@@ -1,0 +1,93 @@
+/**
+ * SidebarFilter.css
+ */
+
+.sidebar-filter {
+  background-color: var(--color-white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+  padding: 20px;
+  position: sticky;
+  top: calc(var(--header-height) + 16px);
+}
+
+.sidebar-filter-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.sidebar-filter-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0;
+  color: var(--color-text);
+}
+
+.sidebar-filter-reset {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border: none;
+  background: transparent;
+  color: var(--color-primary);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.sidebar-filter-reset:hover {
+  text-decoration: underline;
+}
+
+.sidebar-filter-group {
+  margin-bottom: 22px;
+}
+
+.sidebar-filter-group:last-child {
+  margin-bottom: 0;
+}
+
+.sidebar-filter-group-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 12px;
+}
+
+.sidebar-filter .form-check {
+  margin-bottom: 10px;
+}
+
+.sidebar-filter .form-check-input:checked {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.sidebar-filter .form-check-label {
+  font-size: 0.88rem;
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+.sidebar-filter-rating-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.sidebar-filter-rating-label svg {
+  color: var(--color-accent);
+  font-size: 0.85rem;
+}
+
+/* ===== Responsive: trên mobile bỏ sticky để không che nội dung ===== */
+@media (max-width: 991px) {
+  .sidebar-filter {
+    position: static;
+    margin-bottom: 24px;
+  }
+}

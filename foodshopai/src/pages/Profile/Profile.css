@@ -1,0 +1,109 @@
+/**
+ * Profile.css
+ */
+
+.profile-page {
+  padding: 28px 0 56px;
+}
+
+.profile-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+  background-color: var(--color-white);
+  padding: 8px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+}
+
+.profile-tab-btn {
+  flex: 1;
+  padding: 11px;
+  border: none;
+  background: transparent;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.profile-tab-btn:hover {
+  background-color: var(--color-background);
+}
+
+.profile-tab-btn--active {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.profile-content {
+  background-color: var(--color-white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+  padding: 26px;
+}
+
+.profile-form label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--color-text);
+  margin-bottom: 6px;
+}
+
+.profile-form .form-control,
+.profile-form .form-select {
+  font-size: 0.9rem;
+  border-radius: var(--radius-sm);
+  border-color: var(--color-border);
+  padding: 10px 12px;
+}
+
+.profile-form .form-control:focus,
+.profile-form .form-select:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 0.15rem rgba(46, 125, 50, 0.15);
+}
+
+.profile-field-error {
+  color: #e53935;
+  font-size: 0.78rem;
+  margin-top: 4px;
+}
+
+.profile-success-text {
+  color: var(--color-primary);
+  background-color: rgba(46, 125, 50, 0.08);
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  margin-bottom: 18px;
+}
+
+.profile-error-text {
+  color: #e53935;
+  background-color: rgba(229, 57, 53, 0.08);
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  margin-bottom: 18px;
+}
+
+.profile-submit-btn {
+  margin-top: 22px;
+  padding: 12px 32px;
+  border: none;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.profile-submit-btn:hover {
+  background-color: #256628;
+  transform: translateY(-1px);
+}

@@ -1,0 +1,23 @@
+/**
+ * Breadcrumb.css
+ */
+
+.app-breadcrumb {
+  background-color: var(--color-white);
+  border-bottom: 1px solid var(--color-border);
+  padding: 14px 0;
+}
+
+.app-breadcrumb .breadcrumb-item a {
+  color: var(--color-text-light);
+  transition: color 0.2s ease;
+}
+
+.app-breadcrumb .breadcrumb-item a:hover {
+  color: var(--color-primary);
+}
+
+.app-breadcrumb .breadcrumb-item.active {
+  color: var(--color-primary);
+  font-weight: 500;
+}

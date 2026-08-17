@@ -1,0 +1,51 @@
+/**
+ * FlashSale.css
+ */
+
+/* Dùng chung style lưới sản phẩm */
+@import './ProductGrid.css';
+
+.flash-sale {
+  padding: 56px 0;
+  background-color: var(--color-white);
+}
+
+.flash-sale-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.flash-sale-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.flash-sale-icon {
+  color: var(--color-accent);
+}
+
+.flash-sale-countdown {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+}
+
+.flash-sale-countdown strong {
+  padding: 6px 14px;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.5px;
+}

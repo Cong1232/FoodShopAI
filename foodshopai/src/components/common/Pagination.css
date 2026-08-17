@@ -1,0 +1,32 @@
+/**
+ * Pagination.css
+ * Ghi đè nhẹ style Bootstrap Pagination cho đồng bộ tone màu dự án.
+ */
+
+.app-pagination {
+  margin-top: 32px;
+}
+
+.app-pagination .page-link {
+  color: var(--color-primary);
+  border-color: var(--color-border);
+  margin: 0 3px;
+  border-radius: var(--radius-sm) !important;
+  font-weight: 500;
+}
+
+.app-pagination .page-link:hover {
+  background-color: rgba(46, 125, 50, 0.08);
+  color: var(--color-primary);
+}
+
+.app-pagination .page-item.active .page-link {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.app-pagination .page-item.disabled .page-link {
+  color: var(--color-text-light);
+  background-color: transparent;
+}

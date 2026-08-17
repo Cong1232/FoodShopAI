@@ -1,0 +1,270 @@
+/**
+ * Header.css
+ * Style riêng cho component Header - dùng biến màu khai báo trong variables.css
+ */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: var(--header-height);
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  align-items: center;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+/* ===== Logo ===== */
+.header-logo {
+  display: flex;
+  align-items: baseline;
+  font-size: 1.6rem;
+  font-weight: 700;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.logo-food {
+  color: var(--color-primary);
+}
+
+.logo-shop {
+  color: var(--color-text);
+}
+
+.logo-ai {
+  color: var(--color-accent);
+}
+
+/* ===== Menu điều hướng ===== */
+.header-nav-list {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+}
+
+.header-nav-link {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: var(--radius-sm);
+  font-weight: 500;
+  color: var(--color-text);
+  white-space: nowrap;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.header-nav-link:hover {
+  background-color: rgba(46, 125, 50, 0.08);
+  color: var(--color-primary);
+}
+
+.header-nav-link--active {
+  color: var(--color-primary);
+  background-color: rgba(46, 125, 50, 0.1);
+}
+
+/* ===== Dropdown Danh mục ===== */
+.header-nav-dropdown-container {
+  position: relative;
+}
+
+.header-nav-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-medium);
+  border-radius: var(--radius-md);
+  list-style: none;
+  padding: 8px 0;
+  margin: 0;
+  min-width: 180px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.2s ease;
+  z-index: 1001;
+}
+
+.header-nav-dropdown-container:hover .header-nav-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.header-dropdown-item {
+  display: block;
+  padding: 8px 16px;
+  color: var(--color-text);
+  font-size: 0.95rem;
+  transition: background-color 0.2s ease;
+}
+
+.header-dropdown-item:hover {
+  background-color: rgba(46, 125, 50, 0.08);
+  color: var(--color-primary);
+}
+
+/* ===== Ô tìm kiếm ===== */
+.header-search {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 0; /* Cho phép search bar thu nhỏ dưới kích thước nội dung */
+  max-width: 320px;
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 4px 4px 4px 16px;
+}
+
+@media (min-width: 1200px) {
+  .header-search {
+    max-width: 380px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .header-search {
+    max-width: 450px;
+  }
+}
+
+.header-search-input {
+  flex: 1;
+  min-width: 0; /* Bắt buộc input có thể thu nhỏ */
+  width: 100%;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-family: var(--font-family-base);
+  font-size: 0.9rem;
+}
+
+.header-search-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.header-search-btn:hover {
+  background-color: #256628;
+}
+
+.header-search--mobile {
+  display: none;
+}
+
+/* ===== Icon chức năng ===== */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.header-icon-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border: none;
+  background-color: transparent;
+  border-radius: 50%;
+  font-size: 1.25rem;
+  color: var(--color-text);
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.header-icon-btn:hover {
+  background-color: rgba(46, 125, 50, 0.08);
+  color: var(--color-primary);
+}
+
+.header-badge {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  min-width: 16px;
+  height: 16px;
+  padding: 0 3px;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  font-size: 0.65rem;
+  line-height: 16px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.header-menu-toggle {
+  display: none;
+}
+
+/* ===== Responsive: Mobile ===== */
+@media (max-width: 991px) {
+  .header-search--desktop {
+    display: none;
+  }
+
+  .header-menu-toggle {
+    display: flex;
+  }
+
+  .header-nav {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    background-color: var(--color-white);
+    box-shadow: var(--shadow-soft);
+    padding: 16px;
+    flex-direction: column;
+    transform: translateY(-12px);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease;
+  }
+
+  .header-nav--open {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .header-nav-list {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .header-nav-link {
+    padding: 12px 14px;
+  }
+
+  .header-search--mobile {
+    display: flex;
+    margin-top: 12px;
+  }
+}

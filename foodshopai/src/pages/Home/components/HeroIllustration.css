@@ -1,0 +1,176 @@
+.hero-illustration-container {
+  width: 100%;
+  height: 420px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #ffffff 0%, #e8f5e9 100%);
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(46, 125, 50, 0.08);
+}
+
+.hero-illu-bg-shape {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(40px);
+  z-index: 1;
+}
+
+.shape-1 {
+  width: 250px;
+  height: 250px;
+  background: rgba(129, 199, 132, 0.3);
+  top: -50px;
+  left: -50px;
+}
+
+.shape-2 {
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 183, 77, 0.2);
+  bottom: -20px;
+  right: -30px;
+}
+
+.hero-illu-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-illu-logo-group {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: float 4s ease-in-out infinite;
+}
+
+.logo-bag {
+  font-size: 130px;
+  color: #2e7d32;
+  position: absolute;
+  z-index: 1;
+}
+
+.logo-robot {
+  font-size: 60px;
+  color: #ffffff;
+  position: absolute;
+  top: 75px;
+  z-index: 2;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
+}
+
+.logo-leaf {
+  font-size: 45px;
+  color: #81c784;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 3;
+  animation: rotateLeaf 5s linear infinite;
+  transform-origin: bottom left;
+}
+
+.logo-spark {
+  font-size: 35px;
+  color: #ffb300;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: 3;
+  animation: blinkSpark 2s ease-in-out infinite;
+}
+
+.floating-icon {
+  position: absolute;
+  font-size: 30px;
+  z-index: 3;
+  animation: floatSmall 3s ease-in-out infinite;
+}
+
+.icon-carrot {
+  color: #f57c00;
+  top: -10px;
+  left: -25px;
+  animation-delay: 0.5s;
+}
+
+.icon-apple {
+  color: #d32f2f;
+  bottom: 25px;
+  right: -25px;
+  animation-delay: 1.5s;
+}
+
+.icon-broccoli {
+  color: #388e3c;
+  bottom: -15px;
+  left: -5px;
+  animation-delay: 2.5s;
+}
+
+.hero-illu-text-group {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.illu-brand {
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-foodshop {
+  color: #1b5e20;
+}
+
+.brand-ai {
+  color: #ff8f00;
+  margin-left: 2px;
+}
+
+.illu-slogan {
+  font-size: 15px;
+  color: #555;
+  margin-top: 5px;
+  font-weight: 500;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+@keyframes floatSmall {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(10deg); }
+}
+
+@keyframes rotateLeaf {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(15deg); }
+}
+
+@keyframes blinkSpark {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+@media (max-width: 991px) {
+  .hero-illustration-container {
+    height: 350px;
+    margin-top: 30px;
+  }
+}

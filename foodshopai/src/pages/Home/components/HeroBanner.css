@@ -1,0 +1,132 @@
+/**
+ * HeroBanner.css
+ */
+
+.hero-banner {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  padding: 64px 0;
+  overflow: hidden;
+}
+
+.hero-banner-inner {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+
+.hero-banner-text {
+  flex: 1;
+  color: var(--color-white);
+  min-width: 0;
+}
+
+.hero-banner-badge {
+  display: inline-block;
+  padding: 8px 18px;
+  border-radius: var(--radius-lg);
+  background-color: rgba(255, 255, 255, 0.18);
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.hero-banner-title {
+  font-size: 2.6rem;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 18px;
+}
+
+.hero-highlight {
+  color: var(--color-accent);
+}
+
+.hero-banner-desc {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  opacity: 0.95;
+  margin-bottom: 32px;
+  max-width: 520px;
+}
+
+.hero-banner-buttons {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.hero-btn {
+  display: inline-block;
+  padding: 14px 32px;
+  border-radius: var(--radius-lg);
+  font-weight: 600;
+  font-size: 1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.hero-btn--primary {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  box-shadow: var(--shadow-soft);
+}
+
+.hero-btn--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+  color: var(--color-white);
+}
+
+.hero-btn--outline {
+  background-color: transparent;
+  color: var(--color-white);
+  border: 2px solid rgba(255, 255, 255, 0.7);
+}
+
+.hero-btn--outline:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: var(--color-white);
+}
+
+.hero-banner-image {
+  flex-shrink: 0;
+  width: 420px;
+}
+
+.hero-banner-image img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-hover);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 991px) {
+  .hero-banner-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-banner-desc {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-banner-buttons {
+    justify-content: center;
+  }
+
+  .hero-banner-image {
+    width: 100%;
+    max-width: 420px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-banner {
+    padding: 48px 0;
+  }
+
+  .hero-banner-title {
+    font-size: 1.9rem;
+  }
+}

@@ -1,0 +1,39 @@
+/**
+ * FeaturedProducts.css
+ */
+
+@import './ProductGrid.css';
+
+.featured-products {
+  padding: 56px 0;
+}
+
+.featured-products-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.section-heading--left {
+  text-align: left;
+  margin-bottom: 4px;
+}
+
+.section-subheading--left {
+  text-align: left;
+  margin-bottom: 0;
+}
+
+.featured-products-viewall {
+  font-weight: 600;
+  color: var(--color-primary);
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.featured-products-viewall:hover {
+  color: #256628;
+}

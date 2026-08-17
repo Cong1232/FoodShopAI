@@ -1,0 +1,378 @@
+// Biến màu sắc theo chuẩn của dự án (hoặc sử dụng biến toàn cục nếu có)
+$primary-color: #0088FE;
+$secondary-color: #00C49F;
+$accent-color: #FF8042;
+$text-dark: #333;
+$text-muted: #666;
+$bg-light: #f9f9f9;
+$white: #fff;
+$transition-speed: 0.3s;
+
+.about-page {
+  font-family: 'Inter', sans-serif;
+  color: $text-dark;
+  overflow-x: hidden;
+
+  // Banner
+  .about-banner {
+    position: relative;
+    background: linear-gradient(135deg, rgba(0, 136, 254, 0.9) 0%, rgba(0, 196, 159, 0.9) 100%),
+                url('https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&q=80') center/cover no-repeat;
+    color: $white;
+    text-align: center;
+    padding: 100px 20px;
+    animation: fadeIn 1s ease-in-out;
+
+    .banner-title {
+      font-size: 3rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+    
+    .banner-desc {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.6;
+      opacity: 0.9;
+    }
+  }
+
+  // Section chung
+  .about-section {
+    padding: 80px 20px;
+    
+    &.bg-light {
+      background-color: $bg-light;
+    }
+    
+    .section-title {
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 50px;
+      position: relative;
+      
+      &::after {
+        content: '';
+        display: block;
+        width: 60px;
+        height: 4px;
+        background-color: $primary-color;
+        margin: 15px auto 0;
+        border-radius: 2px;
+      }
+    }
+  }
+
+  // Giới thiệu cửa hàng
+  .intro-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    
+    .intro-card {
+      background: $white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      transition: transform $transition-speed;
+      
+      &:hover {
+        transform: translateY(-10px);
+      }
+      
+      h3 {
+        color: $primary-color;
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      
+      p {
+        color: $text-muted;
+        line-height: 1.7;
+      }
+    }
+  }
+
+  // Tại sao chọn FoodShopAI
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    
+    .feature-card {
+      background: $white;
+      padding: 40px 20px;
+      text-align: center;
+      border-radius: 12px;
+      border: 1px solid #eee;
+      transition: all $transition-speed;
+      
+      &:hover {
+        box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        transform: translateY(-5px);
+        border-color: $primary-color;
+        
+        .icon-wrapper {
+          background-color: $primary-color;
+          color: $white;
+          transform: scale(1.1);
+        }
+      }
+      
+      .icon-wrapper {
+        width: 70px;
+        height: 70px;
+        background-color: rgba(0, 136, 254, 0.1);
+        color: $primary-color;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 30px;
+        margin: 0 auto 20px;
+        transition: all $transition-speed;
+      }
+      
+      h4 {
+        font-size: 1.2rem;
+        font-weight: 600;
+      }
+    }
+  }
+
+  // Timeline (Quy trình)
+  .timeline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 20px;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: 30px;
+      left: 40px;
+      right: 40px;
+      height: 2px;
+      background: #e0e0e0;
+      z-index: 1;
+    }
+    
+    .timeline-step {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      width: 120px;
+      
+      .step-circle {
+        width: 60px;
+        height: 60px;
+        background: $white;
+        border: 2px solid $primary-color;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        color: $primary-color;
+        margin: 0 auto 15px;
+        transition: all $transition-speed;
+      }
+      
+      &:hover .step-circle {
+        background: $primary-color;
+        color: $white;
+        transform: scale(1.1);
+      }
+      
+      .step-title {
+        font-weight: 600;
+        font-size: 1rem;
+        color: $text-dark;
+      }
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 40px;
+      
+      &::before {
+        left: 50%;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        height: auto;
+      }
+    }
+  }
+
+  // Thống kê
+  .stats-section {
+    background: linear-gradient(135deg, $secondary-color 0%, $primary-color 100%);
+    color: $white;
+    padding: 60px 20px;
+    
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: center;
+      
+      .stat-item {
+        .stat-number {
+          font-size: 3.5rem;
+          font-weight: 800;
+          margin-bottom: 10px;
+        }
+        .stat-label {
+          font-size: 1.2rem;
+          opacity: 0.9;
+        }
+      }
+    }
+  }
+
+  // Đội ngũ
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+    
+    .team-member {
+      background: $white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      text-align: center;
+      transition: transform $transition-speed;
+      
+      &:hover {
+        transform: translateY(-10px);
+      }
+      
+      img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+      }
+      
+      .member-info {
+        padding: 20px;
+        
+        h4 {
+          font-size: 1.3rem;
+          margin-bottom: 5px;
+          color: $text-dark;
+        }
+        p {
+          color: $primary-color;
+          font-weight: 500;
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  // Cam kết
+  .commitments {
+    max-width: 800px;
+    margin: 0 auto;
+    
+    .commit-item {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 20px;
+      padding: 20px;
+      background: $white;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      
+      .commit-icon {
+        font-size: 30px;
+        color: $secondary-color;
+      }
+      
+      .commit-text {
+        font-size: 1.1rem;
+        font-weight: 500;
+      }
+    }
+  }
+
+  // CTA
+  .cta-section {
+    text-align: center;
+    padding: 80px 20px;
+    background: $bg-light;
+    
+    .cta-box {
+      max-width: 700px;
+      margin: 0 auto;
+      background: $white;
+      padding: 50px;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+      
+      h2 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+        color: $text-dark;
+      }
+      
+      .btn-cta {
+        display: inline-block;
+        padding: 15px 40px;
+        background: $accent-color;
+        color: $white;
+        font-size: 1.2rem;
+        font-weight: 600;
+        border-radius: 30px;
+        text-decoration: none;
+        transition: all $transition-speed;
+        
+        &:hover {
+          background: scale-color($accent-color, $lightness: -10%);
+          transform: translateY(-3px);
+          box-shadow: 0 10px 20px rgba(255, 128, 66, 0.3);
+        }
+      }
+    }
+  }
+
+  // Animations
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .fade-in-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    
+    &.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}

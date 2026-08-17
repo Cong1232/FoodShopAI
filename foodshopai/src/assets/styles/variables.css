@@ -1,0 +1,33 @@
+/**
+ * variables.css
+ * Khai báo các biến CSS (CSS Custom Properties) dùng chung cho toàn bộ dự án.
+ * Mọi màu sắc, font chữ nên được lấy từ đây để dễ đồng bộ và bảo trì,
+ * tránh hard-code màu rải rác trong nhiều file.
+ */
+
+:root {
+  /* ===== Màu sắc thương hiệu ===== */
+  --color-primary: #2e7d32;      /* Xanh lá đậm - màu chủ đạo */
+  --color-secondary: #81c784;    /* Xanh lá nhạt - màu phụ */
+  --color-accent: #ff9800;       /* Cam - màu nhấn (CTA, khuyến mãi) */
+  --color-background: #f8f9fa;   /* Nền chung của trang */
+
+  /* ===== Màu trung tính ===== */
+  --color-text: #212529;
+  --color-text-light: #6c757d;
+  --color-white: #ffffff;
+  --color-border: #e9ecef;
+
+  /* ===== Font chữ ===== */
+  --font-family-base: 'Poppins', sans-serif;
+
+  /* ===== Bo góc & đổ bóng dùng chung ===== */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --shadow-soft: 0 4px 16px rgba(0, 0, 0, 0.06);
+  --shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.1);
+
+  /* ===== Kích thước layout dùng chung ===== */
+  --header-height: 76px;
+}

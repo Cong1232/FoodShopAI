@@ -1,0 +1,33 @@
+/**
+ * Products.css
+ */
+
+.products-page {
+  padding: 28px 0 56px;
+}
+
+.products-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.products-result-count {
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  margin-bottom: 16px;
+}
+
+.products-result-count strong {
+  color: var(--color-primary);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 576px) {
+  .products-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

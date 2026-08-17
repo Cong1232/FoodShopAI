@@ -1,0 +1,99 @@
+.admin-dashboard {
+  padding-bottom: 20px;
+}
+
+.dashboard-card {
+  padding: 20px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  height: 100%;
+}
+
+.dashboard-card-icon {
+  font-size: 3rem;
+  opacity: 0.8;
+}
+
+.dashboard-card-info h3 {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  opacity: 0.9;
+  font-weight: 500;
+}
+
+.dashboard-card-info p {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.dashboard-status-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border: 1px solid var(--color-border);
+}
+
+.dashboard-status-card.pending .status-icon {
+  color: #FF9800;
+  background-color: rgba(255, 152, 0, 0.1);
+}
+
+.dashboard-status-card.completed .status-icon {
+  color: #4CAF50;
+  background-color: rgba(76, 175, 80, 0.1);
+}
+
+.dashboard-status-card.cancelled .status-icon {
+  color: #F44336;
+  background-color: rgba(244, 67, 54, 0.1);
+}
+
+.status-icon {
+  font-size: 2rem;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.dashboard-status-card h4 {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.dashboard-status-card p {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.dashboard-chart-box {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  height: 100%;
+}
+
+.chart-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.chart-container {
+  width: 100%;
+}
