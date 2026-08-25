@@ -1,3 +1,4 @@
+@use "sass:color";
 // Biến màu sắc theo chuẩn của dự án (hoặc sử dụng biến toàn cục nếu có)
 $primary-color: #0088FE;
 $secondary-color: #00C49F;
@@ -351,7 +352,7 @@ $transition-speed: 0.3s;
         transition: all $transition-speed;
         
         &:hover {
-          background: scale-color($accent-color, $lightness: -10%);
+          background: color.scale($accent-color, $lightness: -10%);
           transform: translateY(-3px);
           box-shadow: 0 10px 20px rgba(255, 128, 66, 0.3);
         }
